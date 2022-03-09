@@ -37,7 +37,7 @@ In the above example, Bob's answer to your question is an example of content bas
 IPFS is building a decentralized web on content addressed data. Let's dig a bit deeper into what that means.
 
 ## Cons of Location Addressing
-In the centralized web, since we cannot verify what content lives at what location, we are dependent on central authorities to label and store information as it really us. It is because of this it is quite easy for us to get tricked by bad actors. Have you ever downloaded a video or a game that turned out to be a virus? 
+In the centralized web, since we cannot verify what content lives at what location, we are dependent on central authorities to label and store information as it really is. It is because of this it is quite easy for us to get tricked by bad actors. Have you ever downloaded a video or a game that turned out to be a virus? 
 
 Additionally, location addressing means that the same data can be stored at different locations with different filenames thousands or millions of times, which is mostly useless. 
 
