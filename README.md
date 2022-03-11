@@ -153,7 +153,7 @@ Since IPFS is a peer to peer protocol, it can be configured to work on a variety
 #### Hosting Decentralized Websites
 In the beginning of the article, we mentioned that IPFS can host websites. What are websites? They're just a combination of a few files - HTML, CSS, and JavaScript. You can host all of them on IPFS, and end up with a CID. You can access that CID over a public IPFS gateway and be presented to a website that runs completely on the decentralized internet.
 
-[Random Planet Facts](http://randomplanetfacts.xyz/) is an example website, created by the IPFS team, that runs completely on the IPFS network and is not hosted on a central cloud provider like Google or AWS.
+[Random Planet Facts](https://gateway.pinata.cloud/ipfs/QmW7S5HRLkP4XtPNyT1vQSjP3eRdtZaVtF6FAPvUfduMjA) is an example website, created by the IPFS team, that runs completely on the IPFS network and is not hosted on a central cloud provider like Google or AWS.
 
 ---
 
