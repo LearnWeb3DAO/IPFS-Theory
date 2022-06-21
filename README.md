@@ -2,10 +2,11 @@
 
 ![](https://i.imgur.com/VGb7Gkv.png)
 
-
 IPFS stands for the **InterPlanetary File System**. It is a distributed, peer to peer network, for storing and sharing files, websites, applications, etc. It was originally released in 2015, and is developed by [Protocol Labs](https://protocol.ai/).
 
 To understand what IPFS does and why it is so important, we need a bit of a history lesson around how files are stored and retrieved on the internet today.
+
+<Quiz questionId="54458a01-92b8-4f9a-a893-51b4554a5725" />
 
 ## Data Identification and Retrieval
 Imagine you wanted to buy a book about Ethereum. You ask your friends, Alice and Bob, who have been in the space for a few years about where you can find a good book about Ethereum.
@@ -31,6 +32,8 @@ Location based addressing is how we identify data in Web2 on the centralized web
 
 Ultimately, the contents of a file hosted on the centralized web have no relationship with their location-based address. Given a certain piece of data, there is no way for us to guess the location on the internet where it is stored. We cannot know which domain it is hosted on, who is hosting it, or the filename it is stored as.
 
+<Quiz questionId="19f87ec4-c0f2-4b0e-8a07-42801d19d79c" />
+
 #### Content Addressing
 In the above example, Bob's answer to your question is an example of content based addressing. It provides us a unique, content-based identifier for the data, which we can use to fetch the data from a variety of sources. Given the ISBN number, you can find it at a bookstore, on Amazon, as an eBook, or wherever you want. 
 
@@ -44,6 +47,8 @@ Additionally, location addressing means that the same data can be stored at diff
 Have you ever saved `download.pdf` and `download(1).pdf` on your computer? 
 
 Since content does not tie into location directly, the centralized web is a mess of data that is redudantly saved multiple times under different names at different URL's, and there is no way to tell which items are the same.
+
+<Quiz questionId="a5090868-926a-4db0-b5af-80f99625b9dd" />
 
 ## Content Addressing - Deeper Dive
 On the decentralized web, we can stop relying on central authorities to label information as it is and hope the data we are downloading is not malicious. 
@@ -74,7 +79,12 @@ It may seem a little unintuitive at first. If output hashes are always a fixed s
 
 We will not do a deep dive into hashing for now, but I will say that hashing is a probabilstic guarauntee. It is not 100% guaraunteed that each hash will be unique, but the probability of finding two separate inputs that output the same hash is EXTREMELY low.
 
+<Quiz questionId="58bda410-a943-419f-a96c-2a757e760704" />
+
 In fact, if you were able to find two inputs that give the same output hash on a modern hash function like SHA-2, congratulations! You have broken the security of that hash function. If you can study those inputs and come up with a generalized formula to do this repeatedly, you get the biggest bug bounty in the world! The entire Bitcoin network is yours :)
+
+<Quiz questionId="df8b04b8-1b37-4498-9c76-180541e5cb37" />
+<Quiz questionId="d12a975b-d880-4619-81cf-a29482866d4e" />
 
 ---
 
@@ -94,7 +104,6 @@ Let's say you are looking for a specific file, and you have it's content hash. I
 
 ![](https://i.imgur.com/MBb01oY.png)
 
-
 Your request will be shared through nodes you are directly connected to, to other nodes they are connected to, and so on - until you find someone who has the content you are looking for.
 
 You will know it is exactly the file you are looking for because it has a matching hash. Also, if that node were to go offline while serving the request, you may still be able to get a copy of that file from another node which also had that content.
@@ -109,6 +118,9 @@ Anyone can run an IPFS node and upload files to that node. The node will hash th
 Additionally, for important data, anyone can store a copy of certain data on their own IPFS node to improve replication in case some nodes go offline. Therefore, data on IPFS can be highly available through replication.
 
 One last important thing to note however is that data on IPFS is immutable, which means it cannot be updated. Since files are represented by their CIDs, those files cannot be modified after being uploaded. You can upload a new, modified version, but that version would have a different CID than the original due to the uniqueness property of hash functions.
+
+<Quiz questionId="e82a7ea4-d31a-41eb-ac84-9cf156710f96" />
+<Quiz questionId="c3be88b0-0a38-4fa4-8bc9-31bc01b43387" />
 
 ## IPFS Providers
 Running your own IPFS node may seem like a stretch. Similar to how not a lot of dApp builders run their own Ethereum nodes, and instead use nodes from Infura, Alchemy, or Quiknode to build their applications, you can also use node providers for IPFS.
@@ -125,6 +137,8 @@ The Protocol Labs IPFS Gateway lives at `https://ipfs.io/`.
 Here's some IPFS documentation, hosted on IPFS itself. You can access it from the public gateway by visiting this link - [https://ipfs.io/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/example](https://ipfs.io/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/example)
 
 It is upto node runners whether or not they want to expose a public gateway. Opening a public gateway does mean users being able to use your node to fetch and retrieve arbitrary data from the network, which can increase traffic and bandwidth costs of running your node, so you can choose not to open it if you wanted to. Providers like Pinata and Textile allow you to choose whether you want to expose a public gateway or not.
+
+<Quiz questionId="842ad9a6-afb3-4f49-93d5-84d08dd4a134" />
 
 ## IPFS Use Cases
 There are a lot of use cases for IPFS. Since it is a trustless, decentralized, redundant data store - it has a lot of implications. There is no censorship, there is no one in control of the network.
@@ -150,10 +164,14 @@ Lots of organizations have huge datasets. When I say huge, I mean like petabytes
 #### Offline Data Sharing
 Since IPFS is a peer to peer protocol, it can be configured to work on a variety of transport protocols. So far we have been assuming that data on IPFS is transfered over the HTTP(S) protocol, which requires an internet connection. However, you can configure IPFS to instead work over Bluetooth, or Radio Signals, or other types of signals. This can be useful in disaster struck areas or low connectivity areas to enable data sharing within a community that lacks internet access.
 
+<Quiz questionId="8eb68da1-736b-4b1a-bb71-d06d7da46922" />
+
 #### Hosting Decentralized Websites
 In the beginning of the article, we mentioned that IPFS can host websites. What are websites? They're just a combination of a few files - HTML, CSS, and JavaScript. You can host all of them on IPFS, and end up with a CID. You can access that CID over a public IPFS gateway and be presented to a website that runs completely on the decentralized internet.
 
 [Random Planet Facts](https://gateway.pinata.cloud/ipfs/QmW7S5HRLkP4XtPNyT1vQSjP3eRdtZaVtF6FAPvUfduMjA) is an example website, created by the IPFS team, that runs completely on the IPFS network and is not hosted on a central cloud provider like Google or AWS.
+
+<Quiz questionId="418c1ff1-8da1-4a86-be72-f86eccc2ce31" />
 
 ---
 
@@ -166,4 +184,8 @@ As we shift away from centralized authorities towards decentralization, IPFS is 
 
 As we move forward, we will do a practical example of using IPFS to store NFT Metadata on Ethereum.
 
+<Quiz questionId="c78f8beb-4aab-4e6d-948c-aa0ee3b3d424" />
+
 As always, thank you for reading and feel free to ask any questions on Discord!
+
+<SubmitQuiz />
