@@ -75,9 +75,9 @@ There are a few important properties that make hash functions super important:
 > NOTE: This is how passwords are stored in databases. Web apps which require logging in do not store your passwords directly in the database. They store a hash of the database. When someone tries to login, their password is hashed with the same hash function, and the hash is matched against the one stored in the database.
 3. It is not possible to reverse a hash function. This means that given the hashing function `H` and the output hash `b`, you cannot figure out what `a` was. But, if you had `a`, you can check that it outputs `b` quite easily.
 
-It may seem a little unintuitive at first. If output hashes are always a fixed size, but inputs can be arbitrarily large, how can we guarauntee uniqueness of outputs? Take this as an exercise into looking into how secure hashing functions are and dig deeper into it. 
+It may seem a little unintuitive at first. If output hashes are always a fixed size, but inputs can be arbitrarily large, how can we guarantee uniqueness of outputs? Take this as an exercise into looking into how secure hashing functions are and dig deeper into it. 
 
-We will not do a deep dive into hashing for now, but I will say that hashing is a probabilstic guarauntee. It is not 100% guaraunteed that each hash will be unique, but the probability of finding two separate inputs that output the same hash is EXTREMELY low.
+We will not do a deep dive into hashing for now, but I will say that hashing is a probabilistic guarantee. It is not 100% guaranteed that each hash will be unique, but the probability of finding two separate inputs that output the same hash is EXTREMELY low.
 
 <Quiz questionId="58bda410-a943-419f-a96c-2a757e760704" />
 
@@ -149,7 +149,7 @@ Certain countries, organizations, or authorities ban or censor certain types of 
 This can be particularly useful for citizens living in highly authoritative nations or states, where access to information is not widely available on the centralized web.
 
 #### Data marketplaces
-Projects like Filecoin, which is also from Protocol Labs, extends the IPFS network to include incentives for data storers. At a fraction of the cost of hosting data in centralized cloud providers like AWS, you can pay miners of the Filecoin network to host your data. In exchange for the guaruantee of data availability, you pay them in $FIL tokens, and get a decentralized and reliable data storage network for cheaper than centralized solutions.
+Projects like Filecoin, which is also from Protocol Labs, extends the IPFS network to include incentives for data storers. At a fraction of the cost of hosting data in centralized cloud providers like AWS, you can pay miners of the Filecoin network to host your data. In exchange for the guarantee of data availability, you pay them in $FIL tokens, and get a decentralized and reliable data storage network for cheaper than centralized solutions.
 
 #### NFT Metadata
 Recently, decentralized NFT metadata on IPFS has been trending. In the earlier days of NFTs, NFTs had metadata being hosted on central servers. In fact, even in our Sophomore NFT Collection tutorial, we asked you to build an API endpoint to serve NFT metadata.
